@@ -6,14 +6,27 @@ export default class extends Controller {
 
     connect() {
         console.log("hello world");
-
         // this is javascript using stimulus js. you use html elements to connect to it!
         // 'connect' triggers whenever a html element with '<div data-controller="games--rubiks">' enters the page
     }
 
     play() {
+        
+        this.computersPattern = [];
         console.log("play!");
+
+        this.computersPattern 
+
+        for (let i = 0; i < 4; i++) {
+            this.computersPattern.push (Math.floor(Math.random() * 9) + 1); 
+        }
+        console.log(this.computersPattern);
+
+
+       
+
         // here, we want to make the computer pick some random numbers from 1 to 9 and save it in an array
+
         // once we've picked them, we should pick an element with the id for the right number and make them flash somehow
         // for now, lets set the one we're flashing to a black background?
         //
