@@ -15,13 +15,26 @@ export default class extends Controller {
         this.computersPattern = [];
         console.log("play!");
 
-        this.computersPattern 
-
         for (let i = 0; i < 4; i++) {
             this.computersPattern.push (Math.floor(Math.random() * 9) + 1); 
         }
         console.log(this.computersPattern);
 
+        
+        this.computersPattern.forEach((num, i) => {
+        setTimeout (() => { console.log("flashing:"+ num)
+
+            let element = document.getElementById(num)
+            let beforeFlash = element.style.background
+            element.style.background = "#000";
+          
+            setTimeout (() => element.style.background = beforeFlash, 200 * i + 1);
+        
+        200*i + 1});
+
+        });
+
+        
 
        
 
