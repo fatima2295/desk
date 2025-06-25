@@ -1,14 +1,21 @@
-<div class="flex items-center justify-center h-full">
-  <div id="cube" class="border-solid border-2 size-100 flex flex-grid flex-wrap gap-1 justify-center items-center">
-    <div class="border-solid border-2 size-30 bg-red-600"> </div>
-    <div class="border-solid border-2 size-30 bg-blue-700"> </div>
-    <div class="border-solid border-2 size-30 bg-green-600"> </div>
-    <div class="border-solid border-2 size-30 bg-white-600"> </div>
-    <div class="border-solid border-2 size-30 bg-yellow-400"> </div>
-    <div class="border-solid border-2 size-30 bg-orange-500"> </div>
-    <div class="border-solid border-2 size-30 bg-white-600"> </div>
-    <div class="border-solid border-2 size-30 bg-orange-500"> </div>
-    <div class="border-solid border-2 size-30 bg-red-600"> </div>
+<div class="flex items-center justify-center h-full flex flex-col" data-controller="games--rubiks">
+  <div data-action="click->games--rubiks#play">play</div>
+
+  <div id="cube" class="border-solid border-2 size-100 flex flex-grid flex-wrap justify-around items">
+    <div id="1" class="border-solid border-2 size-30 bg-red-600 cursor-pointer" data-action="click->games--rubiks#cubeClicked"> </div>
+    <div id="2" class="border-solid border-2 size-30 bg-blue-700 cursor-pointer" data-action="click->games--rubiks#cubeClicked"> </div>
+    <div id="3" class="border-solid border-2 size-30 bg-green-600 cursor-pointer" data-action="click->games--rubiks#cubeClicked"> </div>
+    <div id="4" class="border-solid border-2 size-30 bg-white-600 cursor-pointer" data-action="click->games--rubiks#cubeClicked"> </div>
+    <div id="5" class="border-solid border-2 size-30 bg-yellow-400 cursor-pointer" data-action="click->games--rubiks#cubeClicked"> </div>
+    <div id="6" class="border-solid border-2 size-30 bg-orange-500 cursor-pointer" data-action="click->games--rubiks#cubeClicked"> </div>
+    <div id="7" class="border-solid border-2 size-30 bg-white-600 cursor-pointer" data-action="click->games--rubiks#cubeClicked"> </div>
+    <div id="8" class="border-solid border-2 size-30 bg-orange-500 cursor-pointer" data-action="click->games--rubiks#cubeClicked"> </div>
+    <div id="9" class="border-solid border-2 size-30 bg-red-600 cursor-pointer" data-action="click->games--rubiks#cubeClicked"> </div>
 
   </div>
 </div>
+
+<!--<div class="flex items-center justify-center h-full" data-controller="games--rubiks">-->
+<!--  <div data-action="click->games--rubiks#play">play</div>-->
+<!--  <div id="cube" class="border-solid border-2 size-100 flex items-center justify-center flex-grid flex-wrap gap-2">-->
+<!--    <div class="item" data-action="click->games--rubiks#cubeClicked"></div>-->
