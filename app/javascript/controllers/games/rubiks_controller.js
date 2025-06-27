@@ -22,15 +22,15 @@ export default class extends Controller {
 
         
         this.computersPattern.forEach((num, i) => {
-        setTimeout (() => { console.log("flashing:"+ num)
-
-            let element = document.getElementById(num)
-            let beforeFlash = element.style.background
-            element.style.background = "#000";
-          
-            setTimeout (() => element.style.background = beforeFlash, 200 * i + 1);
-        
-        200*i + 1});
+            setTimeout (() => { 
+                console.log("flashing:"+ num)
+                let element = document.getElementById(num)
+                let beforeFlash = element.style.background
+                element.style.background = "#000";
+                setTimeout (() => {
+                    element.style.background = beforeFlash; 
+                }, 500);
+            },i * 800);
 
         });
 
