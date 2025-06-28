@@ -56,6 +56,32 @@ export default class extends Controller {
 
     cubeClicked(event){
         console.log("cube " + event.target.id + " clicked");
+
+        if (!this.usersPattern) {
+            this.usersPattern = [];
+        }
+
+        let clicked = parseInt(event.target.id)
+        this.usersPattern.push (event.target.id); 
+
+        let currentIndex = this.usersPattern.length - 1 
+
+        if (clicked =this.computersPattern[currentIndex]) {
+            console.log(this.usersPattern) 
+
+            if (this.usersPattern.length == this.computersPattern.length) {
+                console.log("Correct!")
+            } 
+        }
+        else {
+           console.log("Wrong, try again!")
+        }
+
+  
+        //store which button was clicked into the array 
+        // check if userspattern matches computer pattern 
+
+
         // lets find the number of the one they just clicked and save it in the users pattern picked
         // if they've done the same amount of numbers as the computer, thats it! attempts done
     }
